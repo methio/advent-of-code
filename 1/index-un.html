@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>day1 advent of code</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="inputData"></div>
+    <script type="text/javascript">
+
+    let container = new Array;
+    let stop = false;
+    $.get('input.txt', function(data){
+      let maData = new Array;
+      maData = data.split('\n');
+      for(let i=0; i<maData.length; i++){
+        container.push(parseInt(maData[i]));
+      }
+      for(let i=0; i<container.length; i++){
+        for(let o=0; o<container.length; o++){
+          if(container[i] + container[o] == 2020){
+            let result = container[i]*container[o];
+            console.log("valeur 1 : " + container[i] + ", valeur 2 : " + container[o] + ", résultat " + result);
+            stop = true;
+            break;
+          }else{
+            console.log("ça marche pas");
+          }
+        }
+        if(stop){
+          break;
+        }
+      }
+    });
+
+    </script>
+  </body>
+</html>
