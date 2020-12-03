@@ -9,7 +9,8 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
 
 
   for(const el of data){
-    // every data in a var to compare later
+    // every data in a var to compare later 
+    // thanks Hugo for his help here
     let firstVal = parseInt(el.split('-')[0]);
     let secondVal = parseInt(el.split(' ')[0].split('-')[1]);
     let letterIWant = el.split(' ')[1].split(':')[0];
