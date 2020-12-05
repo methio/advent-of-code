@@ -2,17 +2,22 @@ const fs = require('fs');
 
 let arrayOfSeats = [];
 
-fs.readFile('input.txt', 'utf8', (e, data) => {
+fs.readFile('data.md', 'utf8', (e, data) => {
   data = data.split('\n');
   
-  for(const siege of data){
+  for(let siege of data){
 
-    //parse data with row and col
+    //V1
+    // //parse data with row and col
+    // let [row, col] = [siege.substring(0, 7), siege.substring(7, 10)];
+
+    // //set binary number
+    // row = row.replace(/B/g,"1").replace(/F/g,"0");
+    // col = col.replace(/R/g,"1").replace(/L/g,"0");
+
+    //V2 -> minus
+    siege = siege.replace(/B|R/g, "1").replace(/F|L/g, "0"); 
     let [row, col] = [siege.substring(0, 7), siege.substring(7, 10)];
-
-    //set binary number
-    row = row.replace(/B/g,"1").replace(/F/g,"0");
-    col = col.replace(/R/g,"1").replace(/L/g,"0");
 
     //then parse to int number
     [row, col] = [parseInt(row, 2), parseInt(col, 2)];

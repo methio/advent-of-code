@@ -35,3 +35,6 @@ fs.readFile('input.txt', 'utf8', (e, data) => {
 // Today I learned : 
 // -includes :  https://markodenic.com/10-javascript-array-methods-to-simplify-your-code/
 // - substring (get some character in a string): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring 
+
+// Useful tools : 
+// https://regexr.com/
