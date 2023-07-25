@@ -12,7 +12,7 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
 
   // on split les stacks pour avoir un tableau de tableau avec chaque crates 
   let stacks = new Array(s[0].length);
-
+  
   s = s.split('\n')
         .map(ss=>ss.match(/.{1,4}/g) ?? [])
         .slice(0, -1)
