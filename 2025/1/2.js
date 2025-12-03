@@ -15,12 +15,10 @@ fs.readFile('input.txt', 'utf8', (err, data) => {
                 currentPos--;                
                 if(currentPos < 0)currentPos = 99;
                 if(currentPos == 0)azero++;
-
             }else if(dir == "R"){
                     currentPos++;                
                     if(currentPos > 99)currentPos = 0;  
                     if(currentPos == 0)azero++;
-
             }else{
                 console.log(`neither R or L at index ${index}`);
             }
